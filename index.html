@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Tale</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="container" id="home">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <div class="logo-text"><span>Coffee</span><span>Tale</span></div>
+            </div>
+            <div class="navigation">
+                <a href="#home">Home</a>
+                <a href="#about">Menu</a>
+                <a href="#">Blog</a>
+                <a href="#about">About</a>
+                <a href="#order">Order</a>
+                <a href="#contact">Contact</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </nav>
+
+        <section class="landing" style="background-image: url('images/MAIN.jpg');">                
+                  <div class="header-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/sld1.jpg" alt="Slide 1" /></div>
+                            <div class="swiper-slide"><img src="images/sld2.jpg" alt="Slide 2" /></div>
+                            <div class="swiper-slide"><img src="images/sld3.jpg" alt="Slide 3" /></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                
+                    <div class="landing-contact">
+                        <div class="details"><i class="fa-solid fa-phone"></i><span>999 888 7771</span></div>
+                        <div class="details"><i class="fa-solid fa-location-dot"></i><span>44, Emark Circle, New City</span></div>
+                        <div class="details"><i class="fa-solid fa-clock"></i><span>Open Mon-Fri: 8:00am - 9:00pm</span></div>
+                    </div>
+                </div>
+                
+        </section>
+
+        <section id="about" class="about">
+            <div><i class="fa-solid fa-mobile"></i><h1>Easy to Order</h1><p></p></div>
+            <div><i class="fa-solid fa-truck"></i><h1>Fastest Delivery</h1><p></p></div>
+            <div><i class="fa-solid fa-mug-hot"></i><h1>Quality Coffee</h1><p></p></div>
+        </section>
+
+        <section class="restaurant-hero">
+            <div class="content-wrapper">
+                <div class="hero-text">
+                    <h3 class="subtitle">Culinary Excellence</h3>
+                    <h1 class="main-title">Discover Our Signature Menu</h1>
+                    <p class="description">Experience a journey through flavors with our carefully crafted dishes, combining traditional recipes with modern culinary innovations.</p>
+                    <button class="explore-btn" id="openMenu">Explore Menu</button>
+                </div>
+                <div class="hero-image">
+                    <img src="images/cover.jpg" alt="Featured Dish">
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+        <div class="menu-modal" id="menuModal">
+            <div id="menupejayenge" class="menu-gallery">
+                <div class="menu-item">
+                    <img src="images/menu 2.jpg" alt="Menu Item 1">
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="images/menu 1.jpg" alt="Menu Item 2">
+                    
+                </div>
+                <div class="menu-item">
+                    <img src="images/menu 3.jpg" alt="Menu Item 3">
+                    
+                </div>
+            </div>
+        </div>
+       </section>
+
+        <section id="order" class="order-section">
+            <h1>Order Now</h1>
+            <div class="order-container">
+              <!-- Product Cards -->
+              <div class="product-cards">
+                <div class="product-card">
+                  <img src="images/mocha .jpg" alt="mocha" class="product-image"/>
+                  <h3>Mocha</h3>
+                  <p>A rich and creamy coffee drink made with espresso, steamed milk, and chocolate. Perfect for those who love a sweet, indulgent treat with their caffeine fix!</p>
+                  <div class="price">$15.99</div>
+                  <input type="number" class="product-quantity" id="mocha-quantity" value="0" min="0" />
+                  <button class="add-to-cart" data-product="mocha" data-price="15.99">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                  <img src="images/latte.jpg" alt="Latte" class="product-image"/>
+                  <h3>Latte</h3>
+                  <p>A smooth and velvety coffee made with espresso and steamed milk, offering a mild and creamy taste. The perfect balance of strong coffee flavor and sweetness.</p>
+                  <div class="price">$8.99</div>
+                  <input type="number" class="product-quantity" id="Latte-quantity" value="0" min="0" />
+                  <button class="add-to-cart" data-product="Latte" data-price="8.99">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                  <img src="images/espresso.jpg" alt="Espresso" class="product-image"/>
+                  <h3>Espresso</h3>
+                  <p>A strong, concentrated coffee brewed by forcing hot water through finely-ground coffee beans. It's a perfect shot of caffeine for those who enjoy a bold, rich taste.</p>
+                  <div class="price">$12.99</div>
+                  <input type="number" class="product-quantity" id="Espresso-quantity" value="0" min="0" />
+                  <button class="add-to-cart" data-product="Espresso" data-price="12.99">Add to Cart</button>
+                </div>
+              </div>
+          
+              <!-- Cart Summary -->
+              <div class="cart-summary">
+                <h2>Your Cart</h2>
+                <div class="cart-items" id="cart-items">
+                  <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="total">
+                  <span>Total: </span><span id="total-price">$0.00</span>
+                </div>
+                <button class="place-order">Place Order</button>
+              </div>
+            </div>
+          </section>
+          
+          
+
+        <section class="data">
+            <div><span class="num" data-val="200">10</span><span class="info">Coffee Branches</span></div>
+            <div><span class="num" data-val="50">20</span><span class="info">Number of Awards</span></div>
+            <div><span class="num" data-val="20000">100</span><span class="info">Happy Customers</span></div>
+        </section>
+
+        <section class="customers">
+            <div class="customers-banner">
+                <h1>Our Happy Customers</h1>
+                <p>Join our community of coffee lovers!</p>
+            </div>
+            <div class="clients">
+                <div class="client">
+                    <img src="images/client 1.jpg" alt="Client 1" />
+                    <p>Mark Tae</p>
+                    <span>“It's the best!”</span>
+                </div>
+                <div class="client">
+                    <img src="images/client 2.jpg" alt="Client 2" />
+                    <p>Joe Smark</p>
+                    <span>“I love the ambiance and ofcourse the coffee!”</span>
+                </div>
+                <div class="client">
+                    <img src="images/client 3.jpg" alt="Client 3" />
+                    <p>Mike Clare</p>
+                    <span>“Great service!”</span>
+                </div>
+                <div class="client">
+                    <img src="images/client 4.jpg" alt="Client 4" />
+                    <p>Sara Emey</p>
+                    <span>“My everyday place!”</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-us">
+            <h1>Contact Us</h1>
+            <div class="contact-container">
+              <!-- Contact Form -->
+              <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                  </div>
+                  <button type="submit">Send Message</button>
+                </form>
+              </div>
+          
+              <!-- Contact Info -->
+              <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-item">
+                  <i class="fas fa-phone"></i>
+                  <span>999 888 7771</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>coffeetale@gmail.com</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>44, Emark Circle, New City</span>
+                </div>
+                <div class="map-placeholder">
+                    <img src="images/map.jpg" alt="Slide 1" />
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+        <footer>
+            <div class="copyright">
+                <p>&copy; 2024 Coffee Tale. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+       // Function to update the cart
+function updateCart() {
+  const cartItemsContainer = document.getElementById('cart-items');
+  const totalPriceElement = document.getElementById('total-price');
+  
+  // Initialize cart
+  let cartItems = [];
+  let totalPrice = 0;
+
+  // Get product quantities
+  const mochaQuantity = document.getElementById('mocha-quantity').value;
+  const LatteQuantity = document.getElementById('Latte-quantity').value;
+  const EspressoQuantity = document.getElementById('Espresso-quantity').value;
+
+  // Helper function to add items to the cart
+  function addToCart(productName, quantity, price) {
+    if (quantity > 0) {
+      cartItems.push({
+        product: productName,
+        quantity: quantity,
+        price: price,
+        total: quantity * price,
+      });
+      totalPrice += quantity * price;
+    }
+  }
+
+  // Add items to cart based on quantity
+  addToCart("Mocha", mochaQuantity, 15.99);
+  addToCart("Latte", LatteQuantity, 8.99);
+  addToCart("Espresso", EspressoQuantity, 12.99);
+
+  // Clear the cart display
+  cartItemsContainer.innerHTML = "";
+
+  // Display cart items dynamically
+  cartItems.forEach(item => {
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.innerHTML = `
+      <span class="item-name">${item.product}</span>
+      <span class="item-quantity">x${item.quantity}</span>
+      <span class="item-price">$${item.total.toFixed(2)}</span>
+    `;
+    cartItemsContainer.appendChild(cartItem);
+  });
+
+  // Display total price
+  totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+}
+
+// Add event listeners for adding products to cart
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', () => {
+    updateCart();
+  });
+});
+
+// Add event listener for quantity input changes to update cart
+document.querySelectorAll('.product-quantity').forEach(input => {
+  input.addEventListener('input', () => {
+    updateCart();
+  });
+});
+
+// Add functionality to place order
+document.querySelector('.place-order').addEventListener('click', () => {
+  alert('Your order has been placed! Thank you for ordering!');
+});
+
+
+        document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Your message has been sent! Thank you for contacting us.");
+});
+
+        const openMenuBtn = document.getElementById('openMenu');
+        const menuModal = document.getElementById('menuModal');
+
+        openMenuBtn.addEventListener('click', () => {
+            menuModal.classList.add('active');
+        });
+
+        menuModal.addEventListener('click', (e) => {
+            if (e.target === menuModal) {
+                menuModal.classList.remove('active');
+            }
+        });
+        const swiper = new Swiper(".swiper", {
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            effect: "fade",
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // Initialize Swiper for Menu Section
+        const menuSwiper = new Swiper(".menu-swiper", {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                769: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+            },
+        });
+
+let menu = document.querySelector(".menu");
+let nums = document.querySelectorAll(".num");
+let start = false;
+
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("sticky", window.scrollY > 0);
+
+  if (window.scrollY >= menu.offsetTop) {
+    if (!start) {
+      nums.forEach((num) => {
+        startCount(num);
+      });
+    }
+    start = true;
+  }
+});
+
+const startCount = (el) => {
+  let max = el.dataset.val;
+  let count = 0;
+  const increment = Math.ceil(max / 200);
+
+  let interval = setInterval(() => {
+    count += increment;
+    if (count >= max) {
+      count = max;
+      clearInterval(interval);
+    }
+    el.textContent = count;
+  }, 10);
+};        
+    </script>
+</body>
+</html>

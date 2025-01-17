@@ -46,7 +46,7 @@ To run this project locally, ensure you have:
 4. Open your browser and visit
    ```bash
    http://localhost:3000
-![Screenshot 2024-11-22 004154](https://github.com/user-attachments/assets/57be675f-1dc7-465f-843b-6764f730cc27)
+![Screenshot 2025-01-18 022222](https://github.com/user-attachments/assets/3dbc2bb5-bb5c-4f82-a412-a73665ba8f3e)
 ![Screenshot 2025-01-18 022240](https://github.com/user-attachments/assets/37740569-fd16-47bb-b2a2-bb13e62b69cd)
 ![Screenshot 2025-01-18 022318](https://github.com/user-attachments/assets/96706225-fd55-4869-bf42-6b86ef13d2ba)
 ![Screenshot 2025-01-18 022357](https://github.com/user-attachments/assets/569e5ec9-5825-49d0-aed9-451a7f71e6c2)
